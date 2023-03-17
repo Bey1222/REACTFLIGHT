@@ -1,0 +1,393 @@
+// Imported font
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --PrimaryColor: hsl(90, 50%, 45%);
+  --SecondaryColor: hsl(180, 17%, 30%);
+  --colorOne: hsl(120, 32%, 80%);
+  --colorTwo: hsl(0, 0%, 30%);
+  --hoverColor: hsl(92, 30%, 50%);
+  --whiteColor: hsl(0, 0%, 70%);
+  --blackColor: hsl(0, 0%, 12%);
+  --textColor: hsl(52, 30%, 59%);
+  --borderColor: hsl(0, 0%, 83%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyBg: hsl(0, 0%, 60%);
+  --greyText: hsl(120, 70%, 70%);
+  --inputColor: hsl(330, 12%, 90%);
+  --boxShadow: box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 10px -1px, rgba(0, 0, 0, 0.05), 0px 4px 3px -2px;
+  --transition: .6s ease-in-out;
+}
+
+
+body {
+  background: var(--whiteColor);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.section {
+  padding: 4rem 0 2rem;
+}
+
+.container {
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+.icon {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+}
+
+.none {
+  display: none;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  background: var(--PrimaryColor);
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--whiteColor);
+
+  a {
+    color: var(--whiteColor);
+    font-weight: 300px;
+  }
+
+  &:hover {
+    background: var(--hoverColor);
+  }
+}
+
+img .video {
+  width: 100%;
+  height: auto;
+}
+
+input {
+  font-size: 100%;
+  color: var(--greyText);
+}
+
+p {
+  font-size: 15px;
+  color: var(--greyText);
+  line-height: 25px;
+}
+h4 {
+  padding: 1rem 0;
+  font-weight: 700;
+  color: var(--blackColor);
+}
+
+h2 {
+  font-size: 30px;
+  padding: 1rem 0;
+  color: var(--blackColor);
+}
+
+
+
+.navBar{
+  position: fixed;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1000;
+}
+.navBarOne, .navBarTwo{
+  justify-content: space-between;
+  padding: 1rem;
+  width: 100%;
+}
+.navBarOne{
+  background: var(--SecondaryColor);
+}
+.icon:hover{
+  color: var(--PrimaryColor);
+}
+.atb{
+  gap: .8rem;
+}
+.atb span{
+  color: var(--blackColor);
+  font-size: 14px;
+  cursor: pointer;
+}
+.atb span:hover{
+  color: var(--inputColor);
+  font-size: 700;
+}
+.navBarTwo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 3rem;
+  position: fixed;
+  transition: .3s ease-in-out;
+}
+.navbar_With_Bg{
+  background: var(--whiteColorDeam);
+  padding: .5rem 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05), 0px  4px 6px -2px;
+}
+.logoDiv{
+  width: 50%;
+}
+.logo{
+  width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+  .navBarMenu{
+    position: absolute;
+    background: var(--greyBg);
+    padding: 1.2rem;
+    border-radius: 10px;
+    top: 5rem;
+    right: -50%;
+    width: 80%;
+    transform: translateX(50%);
+    z-index: 2000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05), 0px  4px 6px -2px;
+    border: 3px solid var(--whiteColor);
+    transition: .4s ease-in-out;
+  }
+  .menu{
+    flex-direction: column;
+    gap: .7rem;
+    text-align: center;
+  }
+
+  .listitem{
+    padding: .5rem 0;
+    cursor: pointer;
+    color: var(--blackColor);
+  }
+  .listitem:hover{
+    color: var(--inputColor);
+    font-weight: 700;
+  }
+}
+.btnOne{
+  display: block;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1.3rem;
+}
+.btnTwo{
+  display: none;
+}
+.toggleIcon{
+  font-size: 30px;
+  color: var(--blackColor);
+  margin-bottom: .5rem;
+}
+.showNavBar{
+  right: 50%;
+  transition: .8s ease-in-out;
+}
+
+
+
+/* Home Style */
+.home{
+  padding-top: 15rem;
+  gap: 3rem;
+  flex-direction: column;
+}
+.hText{
+  font-size: 15px;
+  color: var(--blackColor);
+  text-transform: capitalize;
+  text-align: center;
+}
+.homeImages{
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  position: relative;
+}
+.hero{
+  height: 175px;
+  border-radius: 2rem;
+}
+
+/* End Home Style */
+
+
+/* Search style */
+.sectionContainer{
+  width: 100%;
+  padding: 1.5rem;
+  border: 0.5px solid var(--whiteColor);
+  border-radius: 1.2rem;
+  row-gap: 2.2rem;
+}
+.btns{
+  background-color: var(--whiteColor);
+  padding: .7rem;
+  width: 100%;
+  border-radius: 1.2rem;
+  flex-direction: column;
+  margin: auto;
+}
+.singleBtn{
+  padding: .6rem 1rem;
+  font-size: 14px;
+  border-radius: 1rem;
+  width: 80%;
+  text-align: center;
+}
+.singleBtn:hover{
+  background: var(--hoverColor);
+  color: var(--inputColor);
+  font-weight: 500;
+  transition: .5s ease-in-out;
+}
+.active{
+  background: var(--hoverColor);
+  color: var(--inputColor);
+  font-weight: 500;
+}
+.searchIs{
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.iconDiv{
+  padding: 6px 8px;
+  margin-right: 1rem;
+  margin-bottom: 1.3rem;
+}
+.iconDiv .icon{
+  opacity: .6;
+}
+.texts{
+  padding-top: 0;
+  padding-bottom: .4rem;
+  color: var(--blackColor);
+  font-weight: 700;
+}
+input[type=text]{
+  width: 90%;
+  border-left: 0;
+  border-top: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--whiteColor);
+  outline: none;
+  background: transparent;
+}
+input::placeholder{
+  font-size: 15px;
+  opacity: .4;
+  color: var(--blackColor);
+}
+/* End Search style */
+
+/* Support */
+.sectionContainer1{
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 1.2rem;
+  row-gap: 2.2rem;
+}
+.titleDiv h2{
+  text-transform: capitalize;
+}
+.titleDiv p{
+  text-transform: capitalize;
+  font-size: 10px;
+}
+.support{
+  height: 150px;
+  border-radius: 2rem;
+  max-width: 420px;
+  width: 100%;
+}
+.titleDiv small{
+  letter-spacing: .9rem;
+  text-transform: uppercase;
+  color: var(--blackColor);
+  line-height: 1.5rem;
+}
+.infoDiv{
+  margin-top: 2rem;
+  gap: 1.5rem;
+}
+.textDiv{
+  gap: 1.8rem;
+}
+.sInfo .number{
+  background: var(--hoverColor);
+  padding: 2px 6px;
+  border-radius: 4rem;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+}
+.imgDiv{
+  margin: auto;
+}
+/* End Support */
+
+ /* info */
+ .infoContainer .titleDiv{
+   flex-direction: column;
+   text-align: center;
+   gap: 1rem;
+   justify-content: space-between;
+ }
+ .cardsDiv{
+   gap: 1.5rem;
+   margin-top: 2rem;
+ }
+ .sCard{
+   background: var(--inputColor);
+   padding: 2rem 1.5rem;
+   border-radius: 3rem;
+   gap: .5rem;
+   margin: auto;
+   width: 90%;
+   height: 200px;
+   max-width: 230px;
+ } 
+ .iconDiv{
+   justify-content: flex-start;
+   background-color: var(--whiteColor);
+   width: max-content;
+   border-radius: 4rem;
+   height: 50px;
+   padding: 1rem;
+ }
+ .cardTitle{
+   text-transform: capitalize;
+ }
